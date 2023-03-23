@@ -18,10 +18,11 @@
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO
  */
-typedef struct stack_s {
-  int n;
-  struct stack_s *prev;
-  struct stack_s *next;
+typedef struct stack_s
+{
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 
 /**
@@ -32,9 +33,10 @@ typedef struct stack_s {
  * Description: opcode and its function
  * for stack, queues, LIFO, FIFO
  */
-typedef struct instruction_s {
-  char *opcode;
-  void (*f)(stack_t **stack, unsigned int line_number);
+typedef struct instruction_s
+{
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 /**
@@ -46,11 +48,12 @@ typedef struct instruction_s {
  *
  * Description: carries values through the program
  */
-typedef struct bus_s {
-  char *arg;
-  FILE *file;
-  char *content;
-  int lifi;
+typedef struct bus_s
+{
+	char *arg;
+	FILE *file;
+	char *content;
+	int lifi;
 } bus_t;
 extern bus_t bus;
 

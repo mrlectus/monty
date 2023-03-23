@@ -1,0 +1,7 @@
+-I./
+-Wall
+-Wno-format
+-pedantic
+-Werror
+-Wextra
+-std=c89
